@@ -1,11 +1,9 @@
-import { Card } from './styles';
+import { Container } from './styles';
 
 function Section() {
   return(
     <>
-      <Card>
-        <p>Olá</p>
-      </Card>
+      <Container></Container>
     </>
   )
 }

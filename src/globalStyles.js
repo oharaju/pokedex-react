@@ -3,8 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: #3264AF;
-    margin: 0;
-    padding: 0;
+    padding: 60px 20px;
     font-family: Open-Sans, Helvetica, Sans-Serif;
   }
 `;
