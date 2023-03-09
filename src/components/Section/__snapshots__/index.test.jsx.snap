@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`section structure 1`] = `
+<div
+  className="sc-beySbM iLMgTu"
+>
+  <h1
+    className="sc-guDLRT ThJfX"
+  >
+    Pokédex
+  </h1>
+</div>
+`;
