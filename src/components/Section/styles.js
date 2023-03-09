@@ -10,4 +10,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
+`
+
+export const Title =  styled.h1`
+  font-family: 'Paytone One', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  color: #FFCC01;
+  -webkit-text-stroke: 0.1rem #3264AF;
+  margin-bottom: 40px;
 `

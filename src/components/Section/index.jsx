@@ -1,9 +1,13 @@
-import { Container } from './styles';
+import { Container, Title } from './styles';
+import Form from '../Form';
 
 function Section() {
   return(
     <>
-      <Container></Container>
+      <Container>
+        <Title>Pokédex</Title>
+        <Form />
+      </Container>
     </>
   )
 }
