@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import image from '../../images/wallpaper-florest.png';
+import { device } from '../../utils/media'
 
 export const Container = styled.div`
   background-image: url(${image});
@@ -11,6 +12,12 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media ${device.tablet} {
+    width: 590px;
+  }
 `
 
 export const Title =  styled.h1`
