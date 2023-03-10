@@ -5,7 +5,7 @@ function Form() {
   return(
     <>
       <FormSearch>
-        <Input placeholder="Digite um número ou nome de um Pokemon" />
+        <Input placeholder="teste" />
         <Button><FaSearch /></Button>
         <p>lalala</p>
       </FormSearch>
