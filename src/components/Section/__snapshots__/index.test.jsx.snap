@@ -7,14 +7,17 @@ exports[`section structure 1`] = `
   <h1
     className="sc-guDLRT ThJfX"
   >
-    Pokédexx
+    Pokédex
   </h1>
   <form
     className="sc-dmyDGi bMQEJj"
   >
     <input
       className="sc-hLQRIN juyMXD"
+      onChange={[Function]}
       placeholder="Digite um número ou nome de um Pokemon"
+      type="text"
+      value=""
     />
     <button
       className="sc-eDLJxc eaczkK"

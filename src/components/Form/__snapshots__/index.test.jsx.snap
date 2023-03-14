@@ -6,7 +6,10 @@ exports[`Form structure 1`] = `
 >
   <input
     className="sc-guDLRT hXrlyD"
+    onChange={[Function]}
     placeholder="Digite um número ou nome de um Pokemon"
+    type="text"
+    value=""
   />
   <button
     className="sc-dmyDGi cAiAGA"
