@@ -30,8 +30,5 @@ exports[`Form structure 1`] = `
       />
     </svg>
   </button>
-  <p>
-    lalala
-  </p>
 </form>
 `;

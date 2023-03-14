@@ -7,7 +7,7 @@ exports[`section structure 1`] = `
   <h1
     className="sc-guDLRT ThJfX"
   >
-    Pokédex
+    Pokédexx
   </h1>
   <form
     className="sc-dmyDGi bMQEJj"
@@ -38,9 +38,6 @@ exports[`section structure 1`] = `
         />
       </svg>
     </button>
-    <p>
-      lalala
-    </p>
   </form>
 </div>
 `;

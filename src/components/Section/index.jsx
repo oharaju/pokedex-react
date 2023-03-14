@@ -5,7 +5,7 @@ function Section() {
   return(
     <>
       <Container>
-        <Title>Pokédex</Title>
+        <Title>Pokédexx</Title>
         <Form />
       </Container>
     </>
