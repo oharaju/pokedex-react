@@ -19,17 +19,30 @@ function Form() {
   }
 
   const getValueInput = (e) => {
-    e.preventDefault()
     setValue(e.target.value);
+  }
+
+  const clearInputpokemon = () => {
+    setValue("");
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    getPokemon();
+    // clearInputpokemon();
   }
 
   return(
     <>
-      <FormSearch>
+      <FormSearch onSubmit={handleSubmit}>
         <Input placeholder="Digite um número ou nome de um Pokemon" type="text" value={valueInput} onChange={getValueInput} />
         <Button><FaSearch/></Button>
       </FormSearch>
-      {valueInput}
+      
+      <div>
+        {valueInput}
+      </div>
     </>
   )
 }
