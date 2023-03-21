@@ -11,6 +11,7 @@ exports[`section structure 1`] = `
   </h1>
   <form
     className="sc-dmyDGi bMQEJj"
+    onSubmit={[Function]}
   >
     <input
       className="sc-hLQRIN juyMXD"
@@ -42,5 +43,6 @@ exports[`section structure 1`] = `
       </svg>
     </button>
   </form>
+  <div />
 </div>
 `;
