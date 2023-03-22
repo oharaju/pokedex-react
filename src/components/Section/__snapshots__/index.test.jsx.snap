@@ -43,6 +43,6 @@ exports[`section structure 1`] = `
       </svg>
     </button>
   </form>
-  <div />
+  <p />
 </div>
 `;

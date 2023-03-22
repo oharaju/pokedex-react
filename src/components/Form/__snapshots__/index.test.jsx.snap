@@ -36,6 +36,6 @@ Array [
       </svg>
     </button>
   </form>,
-  <div />,
+  <p />,
 ]
 `;

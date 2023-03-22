@@ -8,26 +8,35 @@ function Form() {
   const [valueInput, setValueInput] = useState('');
   const [pokemon, setPokemon] = useState({});
 
-  console.log(pokemon)
-
   const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + valueInput;
+
+  const [error, setError] = useState(null);
+  const errorMessage = "Pokemon não encontrado, tente novamente!";
 
   const getValueInput = (e) => {
     setValueInput(e.target.value);
   }
 
+  function clearInput() {
+    setValueInput('');
+  }
+
   function getPokemon() {
     axios.get(apiPokemon)
     .then((response) => { 
-      setPokemon(response.data)
+      setPokemon(response.data);
+      setError(null);
     })
-    .catch((error) => console.log(error))
+    .catch(() => {
+      setError(errorMessage);
+    });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
     getPokemon();
+    clearInput()
   }
 
   return(
@@ -36,11 +45,12 @@ function Form() {
         <Input placeholder="Digite um número ou nome de um Pokemon" type="text" value={valueInput} onChange={getValueInput} />
         <Button><FaSearch/></Button>
       </FormSearch>
-      {
-        pokemon && (
-          <div>
-            {pokemon.name}
-          </div>
+
+      { 
+        error ? (
+          <p>{error}</p>
+        ) : (
+          <p>{pokemon.name}</p>
         )
       }
     </>
