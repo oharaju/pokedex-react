@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
-import { FormSearch, Input, Button } from './styles';
+import { FormSearch, Input, Button, Card } from './styles';
 import { FaSearch } from "react-icons/fa";
 
 function Form() {
@@ -26,6 +26,8 @@ function Form() {
     .then((response) => { 
       setPokemon(response.data);
       setError(null);
+
+      console.log(response.data)
     })
     .catch(() => {
       setError(errorMessage);
@@ -46,13 +48,15 @@ function Form() {
         <Button><FaSearch/></Button>
       </FormSearch>
 
-      { 
-        error ? (
-          <p>{error}</p>
-        ) : (
-          <p>{pokemon.name}</p>
-        )
-      }
+      <Card>
+        { 
+          error ? (
+            <p>{error}</p>
+          ) : (
+            <p>{pokemon.name}{pokemon.image}</p>
+          )
+        }
+      </Card>
     </>
   )
 }
