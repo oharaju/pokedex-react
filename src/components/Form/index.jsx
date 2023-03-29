@@ -4,9 +4,10 @@ import { FormSearch, Input, Button, Card } from './styles';
 import { FaSearch } from "react-icons/fa";
 
 function Form() {
-
   const [valueInput, setValueInput] = useState('');
-  const [pokemon, setPokemon] = useState({});
+  const [namePokemon, setPokemon] = useState({});
+
+  const [imgSrc, setImgSrc] = useState('');
 
   const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + valueInput;
 
@@ -22,12 +23,24 @@ function Form() {
   }
 
   function getPokemon() {
+
     axios.get(apiPokemon)
     .then((response) => { 
+
+      const baseImageUrl = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/';
+
+      const idPokemon = response.data.id;
+      const idToString = `${idPokemon}`;
+
+      const numbersCharactersId = idToString.length;
+
+      const numberMaxId = 3;
+      const numberZerosBeforeId = "0".repeat(numberMaxId - numbersCharactersId);
+      const responseId =  numberZerosBeforeId + response.data.id;
+
       setPokemon(response.data);
       setError(null);
-
-      console.log(response.data)
+      setImgSrc(baseImageUrl + responseId + ".png");
     })
     .catch(() => {
       setError(errorMessage);
@@ -53,7 +66,10 @@ function Form() {
           error ? (
             <p>{error}</p>
           ) : (
-            <p>{pokemon.name}{pokemon.image}</p>
+            <div>
+              <p>{namePokemon.name}</p>
+              <img src={imgSrc} alt={namePokemon.name} />
+            </div>
           )
         }
       </Card>

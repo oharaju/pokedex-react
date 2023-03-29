@@ -36,6 +36,10 @@ Array [
       </svg>
     </button>
   </form>,
-  <p />,
+  <div
+    className="sc-hLQRIN dslmhw"
+  >
+    <p />
+  </div>,
 ]
 `;

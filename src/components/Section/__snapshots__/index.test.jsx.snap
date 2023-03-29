@@ -43,6 +43,10 @@ exports[`section structure 1`] = `
       </svg>
     </button>
   </form>
-  <p />
+  <div
+    className="sc-jTQDnj jOItML"
+  >
+    <p />
+  </div>
 </div>
 `;
