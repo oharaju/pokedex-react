@@ -46,7 +46,12 @@ exports[`section structure 1`] = `
   <div
     className="sc-jTQDnj jOItML"
   >
-    <p />
+    <div>
+      <p />
+      <img
+        src=""
+      />
+    </div>
   </div>
 </div>
 `;

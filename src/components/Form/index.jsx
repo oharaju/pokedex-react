@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
-import { FormSearch, Input, Button, Card } from './styles';
+import { FormSearch, Input, Button, Card, Image } from './styles';
 import { FaSearch } from "react-icons/fa";
 
 function Form() {
@@ -49,9 +49,9 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
+    
     getPokemon();
-    clearInput()
+    clearInput();
   }
 
   return(
@@ -68,7 +68,7 @@ function Form() {
           ) : (
             <div>
               <p>{namePokemon.name}</p>
-              <img src={imgSrc} alt={namePokemon.name} />
+              <Image src={imgSrc} alt={namePokemon.name} />
             </div>
           )
         }

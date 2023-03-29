@@ -39,7 +39,12 @@ Array [
   <div
     className="sc-hLQRIN dslmhw"
   >
-    <p />
+    <div>
+      <p />
+      <img
+        src=""
+      />
+    </div>
   </div>,
 ]
 `;

@@ -41,3 +41,10 @@ export const Card = styled.div`
   box-shadow: 0 1px 2px rgb(0 0 0 / 2%), 0 2px 4px rgb(0 0 0 / 2%), 0 4px 8px rgb(0 0 0 / 2%), 0 8px 16px rgb(0 0 0 / 2%), 0 16px 32px rgb(0 0 0 / 2%), 0 32px 64px rgb(0 0 0 / 2%);
   margin-bottom: 20px;
 `
+
+export const Image = styled.img`
+  ${props => props.src && `
+    height: 250px;
+    width: 250px;
+  `}
+`
