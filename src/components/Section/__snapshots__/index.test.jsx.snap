@@ -47,10 +47,15 @@ exports[`section structure 1`] = `
     className="sc-jTQDnj jOItML"
   >
     <div>
-      <p />
       <img
+        className="sc-gLLvby iAsqPR"
         src=""
       />
+      <p
+        className="sc-iBdmCd IxZzr"
+      >
+        Nome: 
+      </p>
     </div>
   </div>
 </div>

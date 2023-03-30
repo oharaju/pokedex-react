@@ -48,3 +48,9 @@ export const Image = styled.img`
     width: 250px;
   `}
 `
+
+export const NamePokemon = styled.p`
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  text-align: center;
+`

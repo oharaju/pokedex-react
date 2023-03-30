@@ -40,10 +40,15 @@ Array [
     className="sc-hLQRIN dslmhw"
   >
     <div>
-      <p />
       <img
+        className="sc-eDLJxc bnEsAH"
         src=""
       />
+      <p
+        className="sc-jTQDnj jfRZox"
+      >
+        Nome: 
+      </p>
     </div>
   </div>,
 ]
