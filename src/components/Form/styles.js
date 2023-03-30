@@ -37,7 +37,7 @@ export const Button = styled.button`
 export const Card = styled.div`
   background-color: #dbf6dba6;
   border-radius: 20px;
-  padding: 20px 0;
+  padding: 20px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 2%), 0 2px 4px rgb(0 0 0 / 2%), 0 4px 8px rgb(0 0 0 / 2%), 0 8px 16px rgb(0 0 0 / 2%), 0 16px 32px rgb(0 0 0 / 2%), 0 32px 64px rgb(0 0 0 / 2%);
   margin-bottom: 20px;
 `

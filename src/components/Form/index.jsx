@@ -62,21 +62,22 @@ function Form() {
 
       {
         checkPokemonExists && (
-          <Card>
+          <>
             { 
               pokemonNotFound ? (
                 <p>Pokemon não encontrado, tente novamente!</p>
               ) : (
-                <div>
-                  <Image src={imgSrc} alt={pokemon.name} />
-                  <NamePokemon>{`Nome: ` + pokemon.name}</NamePokemon>
-                </div>
+                <Card>
+                  <div>
+                    <Image src={imgSrc} alt={pokemon.name} />
+                    <NamePokemon>{`Nome: ` + pokemon.name}</NamePokemon>
+                  </div>
+                </Card>
               )
             }
-          </Card>
+          </>
         )
       }
-
     </>
   )
 }
