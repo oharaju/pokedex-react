@@ -5,14 +5,14 @@ import { FaSearch } from "react-icons/fa";
 
 function Form() {
   const [valueInput, setValueInput] = useState('');
-  const [namePokemon, setPokemon] = useState({});
+  const [pokemon, setPokemon] = useState({});
+  const checkPokemonExists = Object.keys(pokemon).length > 0;
 
   const [imgSrc, setImgSrc] = useState('');
 
   const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + valueInput;
 
-  const [error, setError] = useState(null);
-  const errorMessage = "Pokemon não encontrado, tente novamente!";
+  const [pokemonNotFound, setPokemonNotFound] = useState(false);
 
   const getValueInput = (e) => {
     setValueInput(e.target.value);
@@ -39,11 +39,10 @@ function Form() {
       const responseId =  numberZerosBeforeId + response.data.id;
 
       setPokemon(response.data);
-      setError(null);
       setImgSrc(baseImageUrl + responseId + ".png");
     })
     .catch(() => {
-      setError(errorMessage);
+      setPokemonNotFound(true);
     });
   }
 
@@ -61,18 +60,23 @@ function Form() {
         <Button><FaSearch/></Button>
       </FormSearch>
 
-      <Card>
-        { 
-          error ? (
-            <p>{error}</p>
-          ) : (
-            <div>
-              <Image src={imgSrc} alt={namePokemon.name} />
-              <NamePokemon>Nome: {namePokemon.name}</NamePokemon>
-            </div>
-          )
-        }
-      </Card>
+      {
+        checkPokemonExists && (
+          <Card>
+            { 
+              pokemonNotFound ? (
+                <p>Pokemon não encontrado, tente novamente!</p>
+              ) : (
+                <div>
+                  <Image src={imgSrc} alt={pokemon.name} />
+                  <NamePokemon>{`Nome: ` + pokemon.name}</NamePokemon>
+                </div>
+              )
+            }
+          </Card>
+        )
+      }
+
     </>
   )
 }

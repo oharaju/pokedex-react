@@ -43,10 +43,8 @@ export const Card = styled.div`
 `
 
 export const Image = styled.img`
-  ${props => props.src && `
-    height: 250px;
-    width: 250px;
-  `}
+  height: 250px;
+  width: 250px;
 `
 
 export const NamePokemon = styled.p`
