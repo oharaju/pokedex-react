@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/pokedex-react/static/js/main.6d721db7.js",
+    "static/js/787.7303967b.chunk.js": "/pokedex-react/static/js/787.7303967b.chunk.js",
+    "static/media/wallpaper-florest.png": "/pokedex-react/static/media/wallpaper-florest.2dba7c2de628021151ef.png",
+    "index.html": "/pokedex-react/index.html",
+    "main.6d721db7.js.map": "/pokedex-react/static/js/main.6d721db7.js.map",
+    "787.7303967b.chunk.js.map": "/pokedex-react/static/js/787.7303967b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6d721db7.js"
+  ]
+}
