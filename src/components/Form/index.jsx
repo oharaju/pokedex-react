@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from "axios";
 import { FormSearch, Input, Button, Card, Image, NamePokemon } from './styles';
 import { FaSearch } from "react-icons/fa";
 
 function Form() {
   const [valueInput, setValueInput] = useState('');
+  const [pokemonId, setPokemonId] = useState(null);
   const [pokemon, setPokemon] = useState({});
-  const checkPokemonExists = Object.keys(pokemon).length > 0;
-
+  
   const [imgSrc, setImgSrc] = useState('');
 
-  const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + valueInput;
-
   const [pokemonNotFound, setPokemonNotFound] = useState(false);
+  const checkPokemonExists = Object.keys(pokemon).length > 0;
+
+  const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + valueInput;
 
   const getValueInput = (e) => {
     setValueInput(e.target.value);
@@ -39,6 +40,7 @@ function Form() {
       const responseId =  numberZerosBeforeId + response.data.id;
 
       setPokemon(response.data);
+      setPokemonNotFound(false);
       setImgSrc(baseImageUrl + responseId + ".png");
     })
     .catch(() => {
@@ -48,10 +50,13 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    
+    setPokemonId(valueInput);
+  }
+
+  useEffect (() => {
     getPokemon();
     clearInput();
-  }
+  },[pokemonId])
 
   return(
     <>
